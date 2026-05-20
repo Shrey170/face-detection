@@ -75,7 +75,13 @@ function App() {
       return;
     }
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({ video: { width: 1280, height: 720 } });
+      const stream = await navigator.mediaDevices.getUserMedia({ 
+        video: { 
+          facingMode: "user",
+          width: { ideal: 1280 },
+          height: { ideal: 720 }
+        } 
+      });
       if (videoRef.current) {
         videoRef.current.srcObject = stream;
         videoRef.current.addEventListener("loadeddata", () => {
@@ -364,7 +370,7 @@ function App() {
           <div className="scanline"></div>
         </div>
 
-        <div style={{ width: '250px', display: 'flex', flexDirection: 'column' }}>
+        <div className="side-panel" style={{ display: 'flex', flexDirection: 'column' }}>
           <TelemetryPanel rotation={rotation} gaze={gaze} />
           <BiometricsPanel blendshapes={blendshapes} />
           <SystemLogs logs={logs} />

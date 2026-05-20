@@ -230,3 +230,28 @@ input[type=range]::-webkit-slider-runnable-track {
 .text-pink { color: var(--neon-pink); text-shadow: 0 0 5px rgba(255,0,255,0.5); }
 .text-green { color: var(--neon-green); text-shadow: 0 0 5px rgba(0,255,0,0.5); }
 .text-yellow { color: #ffff00; text-shadow: 0 0 5px rgba(255,255,0,0.5); }
+
+.side-panel {
+  width: 250px;
+}
+
+@media (max-width: 900px) {
+  .app-container {
+    height: auto;
+    min-height: 100vh;
+  }
+  body {
+    overflow-y: auto;
+  }
+  .main-content {
+    flex-direction: column;
+    overflow: visible;
+  }
+  .side-panel {
+    width: 100%;
+  }
+  .viewport-container {
+    min-height: 400px;
+    height: 50vh;
+  }
+}
