@@ -62,12 +62,24 @@ p, span, div {
 }
 
 .main-content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 260px 1fr 260px;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas: 
+    "controls cam telemetry"
+    "controls cam biometrics"
+    "controls cam logs";
+  padding: 15px;
+  gap: 15px;
   flex: 1;
   overflow: hidden;
-  padding: 10px;
-  gap: 10px;
 }
+
+.sidebar-controls { grid-area: controls; }
+.viewport-container { grid-area: cam; min-height: 0; }
+.telemetry-panel { grid-area: telemetry; }
+.biometrics-panel { grid-area: biometrics; }
+.system-logs { grid-area: logs; overflow: hidden; }
 
 /* Glassmorphic Panels */
 .glass-panel {
@@ -244,14 +256,25 @@ input[type=range]::-webkit-slider-runnable-track {
     overflow-y: auto;
   }
   .main-content {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+      "cam cam"
+      "telemetry biometrics"
+      "controls controls"
+      "logs logs";
+    height: auto;
     overflow: visible;
-  }
-  .side-panel {
-    width: 100%;
+    padding: 10px;
+    gap: 10px;
   }
   .viewport-container {
-    min-height: 400px;
-    height: 50vh;
+    height: 45vh;
+  }
+  .glass-panel {
+    width: 100% !important;
+    padding: 10px;
+    margin: 0 !important; /* Strip inline margins that break grid */
   }
 }

@@ -370,11 +370,9 @@ function App() {
           <div className="scanline"></div>
         </div>
 
-        <div className="side-panel" style={{ display: 'flex', flexDirection: 'column' }}>
-          <TelemetryPanel rotation={rotation} gaze={gaze} />
-          <BiometricsPanel blendshapes={blendshapes} />
-          <SystemLogs logs={logs} />
-        </div>
+        <TelemetryPanel rotation={rotation} gaze={gaze} />
+        <BiometricsPanel blendshapes={blendshapes} />
+        <SystemLogs logs={logs} />
       </div>
     </div>
   );

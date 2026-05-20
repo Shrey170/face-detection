@@ -11,9 +11,9 @@ const SystemLogs = ({ logs }) => {
   }, [logs]);
 
   return (
-    <div className="glass-panel" style={{ flex: 1, marginTop: '10px', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-      <h3 className="text-yellow" style={{ fontSize: '0.9rem', borderBottom: '1px solid rgba(255,255,0,0.3)', paddingBottom: '5px', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-        <Terminal size={14} /> SYS_LOGS
+    <div className="glass-panel system-logs" style={{ display: 'flex', flexDirection: 'column' }}>
+      <h3 className="text-yellow" style={{ fontSize: '1rem', borderBottom: '1px solid rgba(255,255,0,0.3)', paddingBottom: '5px', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <Terminal size={18} /> SYS_LOGS
       </h3>
       
       <div 

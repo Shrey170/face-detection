@@ -3,7 +3,7 @@ import { Compass } from 'lucide-react';
 
 const TelemetryPanel = ({ rotation, gaze }) => {
   return (
-    <div className="glass-panel" style={{ width: '250px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+    <div className="glass-panel telemetry-panel" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
       <div>
         <h3 className="text-cyan" style={{ fontSize: '1rem', borderBottom: '1px solid rgba(0,243,255,0.3)', paddingBottom: '5px', marginBottom: '15px', display: 'flex', alignItems: 'center', gap: '10px' }}>
           <Compass size={18} /> TELEMETRY

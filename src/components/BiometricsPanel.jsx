@@ -19,7 +19,7 @@ const BiometricsPanel = ({ blendshapes }) => {
   ];
 
   return (
-    <div className="glass-panel" style={{ marginTop: '10px' }}>
+    <div className="glass-panel biometrics-panel" style={{ marginTop: '10px' }}>
       <h3 className="text-pink" style={{ fontSize: '1rem', borderBottom: '1px solid rgba(255,0,255,0.3)', paddingBottom: '5px', marginBottom: '15px', display: 'flex', alignItems: 'center', gap: '10px' }}>
         <Activity size={18} /> BIOMETRICS
       </h3>

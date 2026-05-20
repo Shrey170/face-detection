@@ -8,7 +8,7 @@ const SidebarControls = ({ options, setOptions, handleCapture }) => {
   };
 
   return (
-    <div className="glass-panel side-panel" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+    <div className="glass-panel sidebar-controls" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
       <div>
         <h3 className="text-cyan" style={{ fontSize: '1rem', borderBottom: '1px solid rgba(0,243,255,0.3)', paddingBottom: '5px', marginBottom: '15px', display: 'flex', alignItems: 'center', gap: '10px' }}>
           <Settings size={18} /> CONTROLS
