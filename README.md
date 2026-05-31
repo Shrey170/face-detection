@@ -24,7 +24,7 @@ To run this project locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/2k33cse992574/face-detection.git
+   git clone https://github.com/Shrey170/face-detection.git
    cd face-detection
    ```
 
